@@ -4,8 +4,8 @@ from . import views
 
 app_name = 'posts'
 
-
+"""Ссылки на страницы: главная и сообществ"""
 urlpatterns = [
-    path('', views.index, name='index'),  # Главная страница
-    path('group/<slug:slug>/', views.group_posts, name='group_list'),  # Страница с постами
+    path('', views.index, name='index'),
+    path('group/<slug:slug>/', views.group_posts, name='group_list'),
 ]
