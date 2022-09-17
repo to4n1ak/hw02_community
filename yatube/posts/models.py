@@ -46,4 +46,3 @@ class Post(models.Model):
         verbose_name='Сообщество',
         related_name='posts'
     )
-    
