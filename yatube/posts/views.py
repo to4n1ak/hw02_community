@@ -3,6 +3,7 @@ from .models import Post, Group
 
 POSTS_NUMBER = 10  # Кол-во сообщений для вывода на экран
 
+
 def index(request):
     # в posts будет сохранена выборка из 10 объектов модели Post,
     # отсортированных по полю pub_date по убыванию
