@@ -5,12 +5,8 @@
 
 {% block content %}
   <h2>Сообщество "{{ group.title }}"</h2>
-  {% if group.description %}
-    <p>{{ group.description }}</p>
-  {% else %}
-    <p>У сообщества {{ group.title }} нет дополнительного описания</p>
-  {% endif %}
-  <p><h3>Сообщения сообщества "{{ group.title }}":</h3></p>
+  <p>{{ group.description }}</p>
+  <p>Сообщения сообщества "{{ group.title }}":</p>
   {% for post in group.posts.all %}
   <ul>
     <li>

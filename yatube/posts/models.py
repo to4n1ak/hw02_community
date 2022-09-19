@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
-# Create your models here.
-
 User = get_user_model()
 
 
@@ -42,7 +40,10 @@ class Post(models.Model):
         Group,
         blank=True,
         null=True,
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
         verbose_name='Сообщество',
         related_name='posts'
     )
+
+    class Meta:
+        ordering = ['-pub_date']
