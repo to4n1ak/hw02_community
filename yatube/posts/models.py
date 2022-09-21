@@ -11,7 +11,7 @@ class Group(models.Model):
     )
     slug = models.SlugField(
         unique=True,
-        max_length=20,
+        max_length=200,
         verbose_name='Уникальный адрес сообщества'
     )
     description = models.TextField(
